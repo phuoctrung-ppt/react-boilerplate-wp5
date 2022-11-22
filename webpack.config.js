@@ -6,7 +6,7 @@ const path = require('path');
 const PORT = process.env.PORT || 3000;
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV,
   entry: path.resolve(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
